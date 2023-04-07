@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ИНТЕРАКТИВНАЯ ЦВЕТОЧНАЯ ГАЛЕРЕЯ</title>
+  <style>
+    /* Header styles */
+    header {
+      background-color: rgb(7, 136, 7);
+      text-align: center;
+      padding: 1rem;
+      font-family: 'Lobster', cursive;
+      font-weight: normal;
+      /*font-size: 64px;
+      text-transform: uppercase;*/
+
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem;
+      color: white;
+      font-weight:300;
+    }
+
+    @media (max-width: 600px) {
+      .header-title {
+        font-size: 24px;
+      }
+    }
+
+    @media (min-width: 601px) and (max-width: 960px) {
+      .header-title {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="heading"></h1>
+  </header>
+
+  <script>
+    const colors = [
+      "LavenderBlush",   // #FFF0F5
+      "MistyRose",       // #FFE4E1
+      "Pink",            // #FFC0CB
+      "LightPink",       // #FFB6C1
+      "Salmon",          // #FA8072
+      "LightSalmon",     // #FFA07A
+      "Coral",           // #FF7F50
+      "Tomato",          // #FF6347
+      "OrangeRed",       // #FF4500
+      "DarkOrange",      // #FF8C00
+      "Orange",          // #FFA500
+      "Gold",            // #FFD700
+      "Yellow",          // #FFFF00
+      "LightYellow",     // #FFFFE0
+      "LemonChiffon",    // #FFFACD
+      "PapayaWhip",      // #FFEFD5
+      "PeachPuff",       // #FFDAB9
+      "Khaki",           // #F0E68C
+      "PaleGoldenrod",   // #EEE8AA
+      "Moccasin",        // #FFE4B5
+      "NavajoWhite",     // #FFDEAD
+      "Bisque",          // #FFE4C4
+      "Wheat",           // #F5DEB3
+      "BurlyWood",       // #DEB887
+      "Tan",             // #D2B48C
+      "RosyBrown",       // #BC8F8F
+      "SandyBrown",      // #F4A460
+      "Goldenrod",       // #DAA520
+      "#e78037",   // #B8860B
+      "Chocolate",       // #D2691E
+      "#e78037"      // #8B4513
+    ];
+
+    const heading = document.getElementById("heading");
+    const text = "ИНТЕРАКТИВНАЯ ЦВЕТОЧНАЯ ГАЛЕРЕЯ";
+    const textArray = text.split("");
+
+    // Shuffle colors array randomly
+    for (let i = colors.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [colors[i], colors[j]] = [colors[j], colors[i]];
+    }
+
+    // Color each letter with a different color
+    let i = 0;
+    textArray.forEach((letter) => {
+      const color = colors[i];
+      heading.innerHTML += `<span style="color: ${color}">${letter}</span>`;
+      i++;
+    });
+  </script>
+</body>
+
+</html>
