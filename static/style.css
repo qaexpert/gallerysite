@@ -1,0 +1,203 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #c46d09;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header styles */
+header {
+    background-color: rgb(113, 224, 191);
+}
+
+/* Header container styles */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #630d9c;
+    text-align: center;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #40af8e;
+}
+
+/* Navbar container styles */
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Search button styles */
+.search-bar button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #53f015;
+}
+
+/* Search bar styles */
+.search-bar {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #e71f1f;
+    border-radius: 5px;
+    width: 60%;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #c9c6e6;
+    border-radius: 5px;
+    width: 20%;
+}
+
+/* Catalog container styles */
+.catalog-container {
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #aff1d8;
+    color: #db570b;
+    text-align: left;
+    padding: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ebb17b;
+    padding: 10px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #11a725;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Footer container styles */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-container p {
+    font-size: 14px;
+}
+
+/* Main container styles */
+.main-container {
+    /* display: flex;*/
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    width: 100%;
+}
+
+/* Left sidebar styles */
+.left-sidebar {
+    width: 20%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* Right sidebar styles */
+.right-sidebar {
+    width: 20%;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+/* Apply styles to the .container element to center it horizontally */
+.container {
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+    display: flex;
+}
+
+/* Apply styles to the .sidebar-left and .sidebar-right elements */
+.sidebar-left,
+.sidebar-right {
+    width: 400px;
+    border: 1px solid rgb(231, 225, 225);
+    padding: 20px;
+}
+
+/* Apply styles to the .sidebar-left element to float it to the left */
+.sidebar-left {
+    float: left;
+}
+
+/* Apply styles to the .sidebar-right element to float it to the right */
+.sidebar-right {
+    float: right;
+}
+
+/* Clear the float on the .container element to ensure that it wraps around the sidebars */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}

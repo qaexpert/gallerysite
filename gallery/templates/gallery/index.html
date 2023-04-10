@@ -1,107 +1,231 @@
 {% load static %}
-
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"/>
+    <title>Flower Products Marketplace</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="{% static 'icon-rose-96.ico' %}"/>
-    <title>ИНТЕРАКТИВНАЯ ЦВЕТОЧНАЯ ГАЛЕРЕЯ</title>
-    <style>
-        /* Header styles */
-        header {
-            background-color: rgb(8, 164, 8);
-            text-align: center;
-            font-family: 'Lobster', cursive;
-            font-weight: normal;
-            padding: 0;
-            margin: 0;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 4rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5rem;
-            color: white;
-            font-weight: 300;
-            width: 100%;
-        }
-
-        @media (max-width: 600px) {
-            .header-title {
-                font-size: 24px;
-            }
-        }
-
-        @media (min-width: 601px) and (max-width: 960px) {
-            .header-title {
-                font-size: 30px;
-            }
-        }
-    </style>
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+    {% block css %}
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+    {% endblock %}
 </head>
 
 <body>
 <header>
-    <h1 id="heading"></h1>
+    <div class="header-container">
+        <h1>ИНТЕРАКТИВНАЯ ЦВЕТОЧНАЯ ГАЛЕРЕЯ</h1>
+    </div>
 </header>
+<nav>
+    <div class="navbar">
+        <button>Home</button>
+        <button>Products</button>
+        <button>Categories</button>
+        <button>Brands</button>
+        <button>Deals</button>
+        <button>About Us</button>
+        <button>Contact Us</button>
+        <button>Sign In</button>
+    </div>
+</nav>
+<div class="container">
+    <aside class="sidebar-left">
+        <!-- content for the left sidebar -->ИИ генератор идей — это инструмент, который помогает блогерам
+        быстро и легко придумывать идеи для постов. Он анализирует текстовые данные по вашему запросу, и
+        предлагает идеи для статей и постов, основанные на сгенерированных данных. Таким образом, вы можете
+        быстро и легко получать качественные и в своем роде уникальные идеи для своих постов, которые будут
+        подходить для вашей аудитории. После генерации идей вы так же можете попросить написать уникальную
+        SEO статью под каждую идею
 
-<script>
-    const colors = [
-        "LavenderBlush",   // #FFF0F5
-        "MistyRose",       // #FFE4E1
-        "Pink",            // #FFC0CB
-        "LightPink",       // #FFB6C1
-        "Salmon",          // #FA8072
-        "LightSalmon",     // #FFA07A
-        "Coral",           // #FF7F50
-        "Tomato",          // #FF6347
-        "OrangeRed",       // #FF4500
-        "DarkOrange",      // #FF8C00
-        "Orange",          // #FFA500
-        "Gold",            // #FFD700
-        "Yellow",          // #FFFF00
-        "LightYellow",     // #FFFFE0
-        "LemonChiffon",    // #FFFACD
-        "PapayaWhip",      // #FFEFD5
-        "PeachPuff",       // #FFDAB9
-        "Khaki",           // #F0E68C
-        "PaleGoldenrod",   // #EEE8AA
-        "Moccasin",        // #FFE4B5
-        "NavajoWhite",     // #FFDEAD
-        "Bisque",          // #FFE4C4
-        "Wheat",           // #F5DEB3
-        "BurlyWood",       // #DEB887
-        "Tan",             // #D2B48C
-        "RosyBrown",       // #BC8F8F
-        "SandyBrown",      // #F4A460
-        "Goldenrod",       // #DAA520
-        "#e78037",   // #B8860B
-        "Chocolate",       // #D2691E
-        "#e78037"      // #8B4513
-    ];
+        Это поможет вам создавать посты, которые будут привлекать больше трафика и улучшать ваши SEO
+        результаты. В конечном итоге, использование ИИ генератора идей может быть очень полезным для
+        блогеров, которые хотят создавать качественные SEO посты для своего блога
+    </aside>
+    <main>
+        <div class="search-bar">
+            <label>
+                <input type="text" placeholder="Search...">
+            </label>
+            <button type="submit">Search</button>
+            <label>
+                <select>
+                    <option>English</option>
+                    <option>German</option>
+                    <option>French</option>
+                    <option>Italian</option>
+                    <option>Spanish</option>
+                    <option>Portuguese</option>
+                    <option>Netherlands</option>
+                    <option>Greece</option>
+                    <option>Polish</option>
+                    <option>Swedish</option>
+                </select>
+            </label>
+            <button>Cart</button>
+        </div>
+        <div class="main-container">
 
-    const heading = document.getElementById("heading");
-    const text = "ИНТЕРАКТИВНАЯ ЦВЕТОЧНАЯ ГАЛЕРЕЯ";
-    const textArray = text.split("");
+            <div class="catalog-container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Category</th>
+                        <th>Brand</th>
+                        <th>Color</th>
+                        <th>Price</th>
+                        <th>Discount</th>
+                        <th>Stock</th>
+                        <th>Add to Cart</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Rose</td>
+                        <td>Flower</td>
+                        <td>Brand A</td>
+                        <td>Red</td>
+                        <td>$10.99</td>
+                        <td>20%</td>
+                        <td>10</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tulip</td>
+                        <td>Flower</td>
+                        <td>Brand B</td>
+                        <td>Pink</td>
+                        <td>$8.99</td>
+                        <td>10%</td>
+                        <td>20</td>
+                        <td>
+                            <button>Add</button>
+                        </td>
+                    </tr>
+                    <!-- Repeat the rows for the remaining products -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <aside class="sidebar-right">
+        <!-- content for the right sidebar -->ИИ генератор идей — это инструмент, который помогает блогерам быстро и
+        легко придумывать идеи для постов. Он анализирует текстовые данные по вашему запросу, и предлагает идеи для
+        статей и постов, основанные на сгенерированных данных. Таким образом, вы можете быстро и легко получать
+        качественные и в своем роде уникальные идеи для своих постов, которые будут подходить для вашей аудитории.
+        После генерации идей вы так же можете попросить написать уникальную SEO статью под каждую идею
 
-    // Shuffle a color array randomly
-    for (let i = colors.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [colors[i], colors[j]] = [colors[j], colors[i]];
-    }
-
-    // Color each letter with a different color
-    let i = 0;
-    textArray.forEach((letter) => {
-        const color = colors[i];
-        heading.innerHTML += `<span style="color: ${color}">${letter}</span>`;
-        i++;
-    });
-</script>
+        Это поможет вам создавать посты, которые будут привлекать больше трафика и улучшать ваши SEO результаты. В
+        конечном итоге, использование ИИ генератора идей может быть очень полезным для блогеров, которые хотят
+        создавать качественные SEO посты для своего блога
+    </aside>
+</div>
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2023 Flower Products Marketplace. All rights reserved.</p>
+    </div>
+</footer>
 </body>
 
 </html>
