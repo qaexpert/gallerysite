@@ -17,8 +17,8 @@
 <header>
     <div class="header-container">
         <img src="{% static 'rose1-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К»">
-        <h1>ЦИФРОВАЯ ПЛАТФОРМА<br>РОССИЙСКИЙ «Ц.В.Е.Т.О.К» </h1>
-        <img src="{% static 'rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К»">
+        <h1><span class="digital">ЦИФРОВАЯ ПЛАТФОРМА</span><br><span class="russian">РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</span></h1>
+        <img src="{% static 'rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К.»">
     </div>
 </header>
 <nav>
@@ -36,14 +36,14 @@
 </nav>
 <div class="container">
     <aside class="sidebar-left">
-        <!-- content for the left sidebar --> ПОЛЕЗНЫЕ СОВЕТЫ
+        <span class="lstext">ПОЛЕЗНЫЕ СОВЕТЫ</span>
     </aside>
     <main>
         <div class="search-bar">
             <label>
-                <input type="text" placeholder="Search...">
+                <input type="text" placeholder="Введите текст">
             </label>
-            <button type="submit">Search</button>
+            <button type="submit">Найти</button>
             <label>
                 <select>
                     <option>English</option>
@@ -58,7 +58,7 @@
                     <option>Swedish</option>
                 </select>
             </label>
-            <button>Cart</button>
+            <button><span class="btn-order-text">ЗАКАЗ</span></button>
         </div>
         <div class="main-container">
 
@@ -80,121 +80,109 @@
                     <tr>
                         <td>Роза</td>
                         <td>Cosmic</td>
-                        <td>Brand A</td>
-                        <td>Red</td>
-                        <td>$10.99</td>
+                        <td>Белый</td>
+                        <td>Дмитров</td>
+                        <td>50 рублей</td>
+                        <td>10%</td>
+                        <td>45 рублей</td>
+                        <td>
+                            <button><span class="btn-add-text">Добавить</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Роза</td>
+                        <td>Gracia</td>
+                        <td>Розовый</td>
+                        <td>Воронеж</td>
+                        <td>60 рублей</td>
+                        <td>10%</td>
+                        <td>54 рублей</td>
+                        <td>
+                            <button><span class="btn-add-text">Добавить</span></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Роза</td>
+                        <td>Revival</td>
+                        <td>Белый</td>
+                        <td>Ступино</td>
+                        <td>100 рублей</td>
                         <td>20%</td>
-                        <td>10</td>
+                        <td>80 рублей</td>
                         <td>
-                            <button>Add</button>
+                            <button><span class="btn-add-text">Добавить</span></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
+                        <td>Роза</td>
+                        <td>Cosmic</td>
+                        <td>Белый</td>
+                        <td>Самара</td>
+                        <td>50 рублей</td>
                         <td>10%</td>
-                        <td>20</td>
+                        <td>45 рублей</td>
                         <td>
-                            <button>Add</button>
+                            <button><span class="btn-add-text">Добавить</span></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
+                        <td>Роза</td>
+                        <td>Alegria</td>
+                        <td>Красный</td>
+                        <td>Краснодар</td>
+                        <td>50 рублей</td>
                         <td>10%</td>
-                        <td>20</td>
+                        <td>45 рублей</td>
                         <td>
-                            <button>Add</button>
+                            <button><span class="btn-add-text">Добавить</span></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
+                        <td>Роза</td>
+                        <td>Abigaile</td>
+                        <td>Бордовый</td>
+                        <td>Дмитров</td>
+                        <td>80 рублей</td>
                         <td>10%</td>
-                        <td>20</td>
+                        <td>72 рубля</td>
                         <td>
-                            <button>Add</button>
+                            <button><span class="btn-add-text">Добавить</span></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
-                        <td>10%</td>
-                        <td>20</td>
+                        <td>Роза</td>
+                        <td>Belinda</td>
+                        <td>Белый</td>
+                        <td>Тольятти</td>
+                        <td>70 рублей</td>
+                        <td>20%</td>
+                        <td>56 рублей</td>
                         <td>
-                            <button>Add</button>
+                            <button><span class="btn-add-text">Добавить</span></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
+                        <td>Тюльпан</td>
+                        <td>Maritim</td>
+                        <td>Желтый</td>
+                        <td>Саратов</td>
+                        <td>20 рублей</td>
                         <td>10%</td>
-                        <td>20</td>
+                        <td>18 рублей</td>
                         <td>
-                            <button>Add</button>
+                            <button><span class="btn-add-text">Добавить</span></button>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
+                        <td>Пион</td>
+                        <td>Bubbles</td>
+                        <td>Белый</td>
+                        <td>Волгоград</td>
+                        <td>50 рублей</td>
                         <td>10%</td>
-                        <td>20</td>
+                        <td>45 рублей</td>
                         <td>
-                            <button>Add</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
-                        <td>10%</td>
-                        <td>20</td>
-                        <td>
-                            <button>Add</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
-                        <td>10%</td>
-                        <td>20</td>
-                        <td>
-                            <button>Add</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tulip</td>
-                        <td>Flower</td>
-                        <td>Brand B</td>
-                        <td>Pink</td>
-                        <td>$8.99</td>
-                        <td>10%</td>
-                        <td>20</td>
-                        <td>
-                            <button>Add</button>
+                            <button><span class="btn-add-text">Добавить</span></button>
                         </td>
                     </tr>
                     <!-- Repeat the rows for the remaining products -->
@@ -204,7 +192,7 @@
         </div>
     </main>
     <aside class="sidebar-right">
-        <!-- content for the right sidebar -->ПОЛЕЗНАЯ РЕКЛАМА
+        <span class="lstext">ОТРАСЛЕВАЯ РЕКЛАМА</span>
     </aside>
 </div>
 <footer>
@@ -212,9 +200,8 @@
         <p> Российский <span class="first-letter">Ц</span>веточный <span class="first-letter">В</span>иртуальный
             <span class="first-letter">Е</span>диный <span class="first-letter">Т</span>орговый <span
                     class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс</p>
-        <p>&copy; 2023 Тольятти</p>
+        <p>© 2023 Россия Тольятти</p>
     </div>
 </footer>
 </body>
-
 </html>
