@@ -1,0 +1,18 @@
+footer {
+    background-color: #2d9375;
+    color: #95e5db;
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    height: 74px;
+    letter-spacing: 2px;
+    box-sizing: initial;
+}
+
+.first-letter {
+    color: #ef1a66;
+    font-weight: bold;
+    font-size: 1.3em;
+}

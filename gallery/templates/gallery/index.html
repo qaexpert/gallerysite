@@ -1,207 +1,368 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Flower Products Marketplace</title>
+    <title>РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="icon" href="{% static 'icon-rose-96.ico' %}"/>
 
     {% block css %}
-        <link href="{% static 'style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/header.css' %}" rel="stylesheet">
+        <link href="{% static 'css/nav.css' %}" rel="stylesheet">
+        <link href="{% static 'css/search.css' %}" rel="stylesheet">
+        <link href="{% static 'css/main.css' %}" rel="stylesheet">
+        <link href="{% static 'css/footer.css' %}" rel="stylesheet">
+    {% endblock %}
+    {% block js %}
+        <script src="{% static 'js/language.js' %}"></script>
     {% endblock %}
 </head>
 
 <body>
-<header>
-    <div class="header-container">
-        <img src="{% static 'rose1-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К»">
-        <h1><span class="digital">ЦИФРОВАЯ ПЛАТФОРМА</span><br><span class="russian">РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</span></h1>
-        <img src="{% static 'rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К.»">
+<header><img src="{% static 'rose1-3d-96.png' %}"
+         alt="Логотип «Ц.В.Е.Т.О.К»">
+    <div>
+    <span class="digital">ЦИФРОВАЯ ПЛАТФОРМА</span><br>
+    <span class="russian">РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</span>
     </div>
+    <img src="{% static 'rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К.»">
 </header>
+
 <nav>
-    <div class="navbar">
-        <button>Главная</button>
-        <button>Информация</button>
-        <button>Контакты</button>
-        <button>Акции</button>
-        <button>Поставщики</button>
-        <button>Мои Заказы</button>
-        <button>Зарегистрироваться</button>
-        <button>Войти</button>
-
-    </div>
+    <button>Главная</button>
+    <button>Информация</button>
+    <button>Контакты</button>
+    <a href="https://garden.ga/login/"><button>Зарегистрироваться</button></a>
+    <button id="red">Акции</button>
+    <a href="https://garden.ga/"><button>Поставщики</button></a>
+    <a href="https://garden.ga/projects/"><button>Цветы</button></a>
+    <button>Мои Заказы</button>
+    <button>Войти</button>
 </nav>
-<div class="container">
-    <aside class="sidebar-left">
-        <span class="lstext">ПОЛЕЗНЫЕ СОВЕТЫ</span>
-    </aside>
-    <main>
-        <div class="search-bar">
-            <label>
-                <input type="text" placeholder="Введите текст">
-            </label>
-            <button type="submit">Найти</button>
-            <label>
-                <select>
-                    <option>English</option>
-                    <option>German</option>
-                    <option>French</option>
-                    <option>Italian</option>
-                    <option>Spanish</option>
-                    <option>Portuguese</option>
-                    <option>Netherlands</option>
-                    <option>Greece</option>
-                    <option>Polish</option>
-                    <option>Swedish</option>
-                </select>
-            </label>
-            <button><span class="btn-order-text">ЗАКАЗ</span></button>
-        </div>
-        <div class="main-container">
 
-            <div class="catalog-container">
-                <table>
-                    <thead>
-                    <tr>
-                        <th>Наименование</th>
-                        <th>Сорт</th>
-                        <th>Цвет</th>
-                        <th>Поставщик</th>
-                        <th>Цена</th>
-                        <th>Скидка</th>
-                        <th>Сумма</th>
-                        <th>Добавить в заказ</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Роза</td>
-                        <td>Cosmic</td>
-                        <td>Белый</td>
-                        <td>Дмитров</td>
-                        <td>50 рублей</td>
-                        <td>10%</td>
-                        <td>45 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Роза</td>
-                        <td>Gracia</td>
-                        <td>Розовый</td>
-                        <td>Воронеж</td>
-                        <td>60 рублей</td>
-                        <td>10%</td>
-                        <td>54 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Роза</td>
-                        <td>Revival</td>
-                        <td>Белый</td>
-                        <td>Ступино</td>
-                        <td>100 рублей</td>
-                        <td>20%</td>
-                        <td>80 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Роза</td>
-                        <td>Cosmic</td>
-                        <td>Белый</td>
-                        <td>Самара</td>
-                        <td>50 рублей</td>
-                        <td>10%</td>
-                        <td>45 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Роза</td>
-                        <td>Alegria</td>
-                        <td>Красный</td>
-                        <td>Краснодар</td>
-                        <td>50 рублей</td>
-                        <td>10%</td>
-                        <td>45 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Роза</td>
-                        <td>Abigaile</td>
-                        <td>Бордовый</td>
-                        <td>Дмитров</td>
-                        <td>80 рублей</td>
-                        <td>10%</td>
-                        <td>72 рубля</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Роза</td>
-                        <td>Belinda</td>
-                        <td>Белый</td>
-                        <td>Тольятти</td>
-                        <td>70 рублей</td>
-                        <td>20%</td>
-                        <td>56 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Тюльпан</td>
-                        <td>Maritim</td>
-                        <td>Желтый</td>
-                        <td>Саратов</td>
-                        <td>20 рублей</td>
-                        <td>10%</td>
-                        <td>18 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Пион</td>
-                        <td>Bubbles</td>
-                        <td>Белый</td>
-                        <td>Волгоград</td>
-                        <td>50 рублей</td>
-                        <td>10%</td>
-                        <td>45 рублей</td>
-                        <td>
-                            <button><span class="btn-add-text">Добавить</span></button>
-                        </td>
-                    </tr>
-                    <!-- Repeat the rows for the remaining products -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
-    <aside class="sidebar-right">
-        <span class="lstext">ОТРАСЛЕВАЯ РЕКЛАМА</span>
-    </aside>
-</div>
-<footer>
-    <div class="footer-container">
-        <p> Российский <span class="first-letter">Ц</span>веточный <span class="first-letter">В</span>иртуальный
-            <span class="first-letter">Е</span>диный <span class="first-letter">Т</span>орговый <span
-                    class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс</p>
-        <p>© 2023 Россия Тольятти</p>
+<div class="search-bar">
+    <label>
+        <span style="height: 150px;">&#x1F310;</span>
+        <select id="language-selector" onchange="updateLanguage()">
+
+            <option value=""> Выбрать язык</option>
+            <option value="ru" data-flag="{% static 'ru.svg' %}">Русский</option>
+            <option value="en" data-flag="{% static 'en.svg' %}">English</option>
+            <option value="fr" data-flag="{% static 'fr.svg' %}">French</option>
+            <option value="es" data-flag="{% static 'es.svg' %}">Spanish</option>
+
+        </select>
+        <span id="selected-language">Русский</span>
+        <span class="flag-container">
+                    <img id="language-flag" src="{% static 'ru.svg' %}" alt="Флаг">
+                </span>
+    </label>
+
+    <form id="search-form">
+        <label>
+            <input id="search-input" type="text" placeholder="Введите текст">
+            <button type="submit">Найти</button>
+        </label>
+    </form>
+
+    <div class="order">
+        <button><span class="btn-order-text">ПЕРЕЙТИ в ЗАКАЗ</span></button>
+        <span class="order-count-item">В Вашем заказе 200 товаров</span>
     </div>
+
+</div>
+<main>
+    <aside class="sidebar-left">
+        <span class="sidebar-title">ПОЛЕЗНЫЕ СОВЕТЫ</span>
+        <p class="sidebar-text"><br>Обеспечьте правильное хранение цветов - цветы нужно хранить в холодильнике, чтобы
+            сохранить их свежесть и увеличить срок их хранения.
+            Поддерживайте чистоту и порядок на складе и в магазине - это поможет создать приятную атмосферу для
+            покупателей и повысит доверие к вашему бренду.
+            Предлагайте широкий ассортимент цветов - чем больше выбор, тем больше вероятность того, что у покупателя
+            появится желание купить у вас цветы.
+            Обеспечьте быструю доставку - покупатели всегда ценят быструю доставку, особенно если речь идет о подарках.
+        </p><br>
+        <p class="sidebar-text">Проверяйте свежесть цветов - цветы должны быть свежими, не завядшими и не поврежденными.
+            Выбирайте правильный букет - букет должен быть подобран в соответствии с тематикой и поводом, на который вы
+            планируете его подарить.
+            Сравнивайте цены - сравнивайте цены на цветы у разных продавцов, чтобы выбрать лучшее предложение.
+            Узнавайте о политике возврата - убедитесь, что продавец предоставляет возможность вернуть или обменять
+            цветы, если они не удовлетворяют вашим требованиям.</p>
+    </aside>
+
+    <div class="catalog-container">
+        <table>
+            <caption><h1>ОНЛАЙН - ВИТРИНА</h1></caption>
+            <thead>
+            <tr>
+                <th>Наименование</th>
+                <th>Сорт</th>
+                <th>Цвет</th>
+                <th>Поставщик</th>
+                <th>Цена</th>
+                <th>Скидка</th>
+                <th>Сумма</th>
+                <th>Добавить в заказ</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Дмитров</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Дмитров</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Дмитров</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Gracia</td>
+                <td>Розовый</td>
+                <td>Воронеж</td>
+                <td>60 рублей</td>
+                <td>10%</td>
+                <td>54 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Revival</td>
+                <td>Белый</td>
+                <td>Ступино</td>
+                <td>100 рублей</td>
+                <td>20%</td>
+                <td>80 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Самара</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Alegria</td>
+                <td>Красный</td>
+                <td>Краснодар</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Abigaile</td>
+                <td>Бордовый</td>
+                <td>Дмитров</td>
+                <td>80 рублей</td>
+                <td>10%</td>
+                <td>72 рубля</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Belinda</td>
+                <td>Белый</td>
+                <td>Тольятти</td>
+                <td>70 рублей</td>
+                <td>20%</td>
+                <td>56 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Пион</td>
+                <td>Bubbles</td>
+                <td>Белый</td>
+                <td>Волгоград</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Belinda</td>
+                <td>Белый</td>
+                <td>Тольятти</td>
+                <td>70 рублей</td>
+                <td>20%</td>
+                <td>56 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Пион</td>
+                <td>Bubbles</td>
+                <td>Белый</td>
+                <td>Волгоград</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Belinda</td>
+                <td>Белый</td>
+                <td>Тольятти</td>
+                <td>70 рублей</td>
+                <td>20%</td>
+                <td>56 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Пион</td>
+                <td>Bubbles</td>
+                <td>Белый</td>
+                <td>Волгоград</td>
+                <td>500 рублей</td>
+                <td>10%</td>
+                <td>450 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <!-- Repeat the rows for the remaining products -->
+            </tbody>
+        </table>
+    </div>
+
+    <aside class="sidebar-right">
+        <span class="sidebar-title">ОТРАСЛЕВАЯ РЕКЛАМА</span>
+        <p class="sidebar-text"><br>На нашей платформе Вы найдете широкий ассортимент цветочной продукции от лучших
+            российских производителей. Мы гарантируем свежесть и высокое качество продукции, а также удобство и
+            безопасность покупок.
+            <br>Если Вы продавец, то наша платформа поможет Вам расширить свою клиентскую базу и найти новых
+            покупателей. Мы предоставляем все необходимые инструменты для продажи и доставки продукции.
+            <br>Если Вы покупатель, то наша платформа поможет Вам найти лучшие цены и качественную продукцию от
+            проверенных производителей. Мы гарантируем удобство и безопасность покупок, а также быструю доставку в любую
+            точку мира.
+            Присоединяйтесь к нам сегодня и получите доступ к лучшей российской цветочной продукции!</p>
+    </aside>
+
+</main>
+
+<footer>
+    <p><span>РОССИЙСКИЙ </span><span class="first-letter">Ц</span>веточный <span class="first-letter">В</span>иртуальный
+        <span class="first-letter">Е</span>диный <span class="first-letter">Т</span>орговый <span
+                class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс</p><br>
+    <p>© 2023 Россия Тольятти version 2.0.1-alpha.00</p>
 </footer>
 </body>
 </html>

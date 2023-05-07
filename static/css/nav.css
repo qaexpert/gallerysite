@@ -1,0 +1,14 @@
+nav {
+    background-color: #3b9f81;
+    /*max-width: initial;*/
+    /*width: auto;*/
+    /*margin: 0 auto;*/
+    padding: 10px 40px 10px 40px;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+#red {
+    color: #efabab;
+}

@@ -1,0 +1,115 @@
+.search-bar {
+    background-color: #a9e8bf;
+    /*max-width: initial;*/
+    /*width: auto;*/
+    /*margin: 0 auto;*/
+    padding: 10px 50px 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*display: inline-block;*/
+    vertical-align: middle;
+}
+
+.search-bar button[type="submit"] {
+    background-color: rgba(95, 176, 169, 0.87);
+    color: rgb(236, 243, 242);
+    border: none;
+    padding: 9px;
+    cursor: pointer;
+    justify-content: center;
+    vertical-align: central;
+}
+
+.search-bar button:hover {
+    background-color: rgb(224, 114, 23);
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #e71f1f;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200%;
+}
+
+
+#search-form label {
+    display: flex;
+    align-items: center;
+    width: 160%;
+    font-size: 16px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #a69fe3;
+    border-radius: 5px;
+    font-size: 16px;
+    /*width: 100%;*/
+}
+#language-selector,
+.flag-container {
+    margin-right: 10px;
+}
+
+#language-selector {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+
+}
+
+#selected-language {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0b9393;
+    margin: 3px;
+}
+
+.flag-container {
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.language-flag {
+    height: 150px;
+    width: 150px;
+
+}
+
+.flag-container img {
+    width: 2.9rem;
+    margin-left: auto;
+    border: 1px solid rgba(112, 110, 110, 0.45);
+}
+
+select option:first-child {
+    color: transparent;
+}
+.order {
+    justify-content: center;
+}
+
+.btn-order-text {
+    text-align: center;
+    color: #025f67;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    justify-content: center;
+}
+
+.btn-order-text:hover {
+    color: lemonchiffon;
+}
+
+.order-count-item {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    color: rgba(4, 93, 166, 0.92);
+}
+

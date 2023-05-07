@@ -1,0 +1,31 @@
+header {
+    background-color: rgba(63, 229, 178, 0.29);
+    /*align-items: center;
+    margin: 0 auto;*/
+    padding: 6px 0 6px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    box-sizing: initial;
+    margin: 0 auto;
+    position: static;
+    top:0;
+}
+
+.digital {
+    color: rgba(248, 50, 50, 0.75);
+    font-size: 44px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    text-align: justify;
+}
+
+.russian {
+    color: rgb(9, 178, 9);
+    font-size: 48px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: Cambria, sans-serif;
+}
