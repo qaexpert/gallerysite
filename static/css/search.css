@@ -1,5 +1,5 @@
 .search-bar {
-    background-color: #a9e8bf;
+    background-color: #c4efd3;
     /*max-width: initial;*/
     /*width: auto;*/
     /*margin: 0 auto;*/
@@ -48,8 +48,7 @@ select {
     font-size: 16px;
     /*width: 100%;*/
 }
-#language-selector,
-.flag-container {
+#language-selector{
     margin-right: 10px;
 }
 
@@ -71,18 +70,19 @@ select {
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 9px;
 }
-
-.language-flag {
-    height: 150px;
-    width: 150px;
-
+.world-container img{
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    margin-right: 9px;
+    width: 2.6rem;
 }
 
 .flag-container img {
     width: 2.9rem;
-    margin-left: auto;
+    margin-left: 9px;
     border: 1px solid rgba(112, 110, 110, 0.45);
 }
 

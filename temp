@@ -34,6 +34,8 @@ python manage.py migrate     python manage.py makemigrations
 
 python manage.py runserver
 
+&#x1F310; /это земной шар
+
 class="first-letter" style="color: inherit;"
 <td class="settings__thumbnail">
                                     <a href="{% url 'project' project.id %}"><img

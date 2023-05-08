@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@
         <script src="{% static 'js/language.js' %}"></script>
     {% endblock %}
 </head>
-
+<h1>{% trans "Hello, world!" %}</h1>
 <body>
 <header><img src="{% static 'rose1-3d-96.png' %}"
          alt="Логотип «Ц.В.Е.Т.О.К»">
@@ -36,17 +37,17 @@
     <button>Главная</button>
     <button>Информация</button>
     <button>Контакты</button>
-    <a href="https://garden.ga/login/"><button>Зарегистрироваться</button></a>
+    <a href="https://garden.ga/register/"><button>Зарегистрироваться</button></a>
     <button id="red">Акции</button>
     <a href="https://garden.ga/"><button>Поставщики</button></a>
     <a href="https://garden.ga/projects/"><button>Цветы</button></a>
     <button>Мои Заказы</button>
-    <button>Войти</button>
+    <a href="https://garden.ga/login/"><button>Войти</button></a>
 </nav>
 
 <div class="search-bar">
     <label>
-        <span style="height: 150px;">&#x1F310;</span>
+        <span class="world-container"><img src="{% static 'select_language_100.png' %}" alt="world"></span>
         <select id="language-selector" onchange="updateLanguage()">
 
             <option value=""> Выбрать язык</option>
@@ -58,6 +59,7 @@
         </select>
         <span id="selected-language">Русский</span>
         <span class="flag-container">
+
                     <img id="language-flag" src="{% static 'ru.svg' %}" alt="Флаг">
                 </span>
     </label>
@@ -364,5 +366,17 @@
                 class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс</p><br>
     <p>© 2023 Россия Тольятти version 2.0.1-alpha.00</p>
 </footer>
+
+<!-- ConveyThis code -->
+<script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script>
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(e) {
+		ConveyThis_Initializer.init({
+			api_key: "pub_7228c728e7831c451c5b664c1cfc1dda"
+		});
+	});
+</script>
+<!-- End ConveyThis code -->
+
 </body>
 </html>
