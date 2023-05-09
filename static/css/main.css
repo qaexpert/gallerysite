@@ -1,26 +1,26 @@
 main {
-    /*width: 100%;*/
-    /*margin: 0 auto;*/
+
     display: flex;
     text-align: center;
-    /*justify-content: space-between;*/
-    /*align-items: initial;*/
-    /*display: inline-block;*/
-    /*vertical-align: top;*/
-    /*position: fixed;*/
+    /*flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;*/
 
 }
 
 .catalog-container {
     width: 60%;
-    margin: 0 auto;
-
-
+    overflow: auto;
+     max-width: 100%;
+     display: flex;
+  flex-wrap: wrap;
 }
 
 table {
-    width: 100%;
+    /*width: 100%;*/
     border-collapse: collapse;
+
+
 }
 
 th {
@@ -31,7 +31,6 @@ th {
     font-weight: bold;
     letter-spacing: 1px;
 }
-
 
 th {
     border: 1px solid #ab1207;
@@ -47,18 +46,17 @@ td {
 
 }
 
-.sidebar-left,
+.sidebar-left{
+    width: 20%;
+    flex-shrink: 0;
+    padding: 25px;
+
+}
+
 .sidebar-right {
     width: 20%;
-    /*box-sizing: border-box;*/
-    /*width: 18%;*/
-    /*border: 1px solid rgba(241, 199, 166, 0.6);*/
-    /*padding: 20px;*/
-    /*align-items: center;*/
-    /*margin: 0 auto;*/
-    /*justify-content: space-between;*/
-    padding: 15px;
-    /*position: initial;*/
+    flex-shrink: 0;
+    padding: 25px;
 }
 
 .sidebar-title {
@@ -73,7 +71,7 @@ td {
 .sidebar-text {
     /*text-align: center;*/
     color: rgb(19, 80, 14);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 400;
     font-family: Arial, sans-serif;
 }
@@ -85,7 +83,7 @@ td {
 .btn-add-text {
     text-align: center;
     color: #025f67;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Segoe UI", sans-serif;
     justify-content: center;

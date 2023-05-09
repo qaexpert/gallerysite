@@ -8,8 +8,8 @@
     <title>РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="{% static 'icon-rose-96.ico' %}"/>
-
+    <link rel="icon" href="{% static 'image/icon-rose-96.ico' %}"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {% block css %}
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
         <link href="{% static 'css/header.css' %}" rel="stylesheet">
@@ -22,48 +22,73 @@
         <script src="{% static 'js/language.js' %}"></script>
     {% endblock %}
 </head>
-<h1>{% trans "Hello, world!" %}</h1>
 <body>
-<header><img src="{% static 'rose1-3d-96.png' %}"
-         alt="Логотип «Ц.В.Е.Т.О.К»">
+<header><img src="{% static 'image/rose1-3d-96.png' %}"
+             alt="Логотип «Ц.В.Е.Т.О.К»">
     <div>
-    <span class="digital">ЦИФРОВАЯ ПЛАТФОРМА</span><br>
-    <span class="russian">РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</span>
+        <span class="digital">ЦИФРОВАЯ ПЛАТФОРМА</span><br>
+        <span class="russian">РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</span>
     </div>
-    <img src="{% static 'rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К.»">
+    <img src="{% static 'image/rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К.»">
 </header>
 
 <nav>
-    <button>Главная</button>
-    <button>Информация</button>
-    <button>Контакты</button>
-    <a href="https://garden.ga/register/"><button>Зарегистрироваться</button></a>
-    <button id="red">Акции</button>
-    <a href="https://garden.ga/"><button>Поставщики</button></a>
-    <a href="https://garden.ga/projects/"><button>Цветы</button></a>
-    <button>Мои Заказы</button>
-    <a href="https://garden.ga/login/"><button>Войти</button></a>
+    <a href="#">
+        <button>Главная</button>
+    </a>
+    <a href="https://garden.ga/">
+        <button>Информация</button>
+    </a>
+    <a href="https://garden.ga/">
+        <button>Контакты</button>
+    </a>
+    <a href="https://garden.ga/register/">
+        <button>Зарегистрироваться</button>
+    </a>
+    <a href="https://garden.ga/">
+        <button id="red">Акции</button>
+    </a>
+    <a href="https://garden.ga/">
+        <button>Поставщики</button>
+    </a>
+    <a href="https://garden.ga/projects/">
+        <button>Цветы</button>
+    </a>
+    <a href="https://garden.ga/">
+        <button>Мои Заказы</button>
+    </a>
+    <a href="https://garden.ga/login/">
+        <button>Войти</button>
+    </a>
 </nav>
 
 <div class="search-bar">
     <label>
-        <span class="world-container"><img src="{% static 'select_language_100.png' %}" alt="world"></span>
+        <span class="world-container"><img src="{% static 'image/select_language_100.png' %}" alt="world"></span>
         <select id="language-selector" onchange="updateLanguage()">
 
             <option value=""> Выбрать язык</option>
-            <option value="ru" data-flag="{% static 'ru.svg' %}">Русский</option>
-            <option value="en" data-flag="{% static 'en.svg' %}">English</option>
-            <option value="fr" data-flag="{% static 'fr.svg' %}">French</option>
-            <option value="es" data-flag="{% static 'es.svg' %}">Spanish</option>
+            <option value="ru" data-flag="{% static 'image/ru.svg' %}">Русский</option>
+            <option value="en" data-flag="{% static 'image/en.svg' %}">English</option>
+            <option value="fr" data-flag="{% static 'image/fr.svg' %}">French</option>
+            <option value="es" data-flag="{% static 'image/es.svg' %}">Spanish</option>
 
         </select>
         <span id="selected-language">Русский</span>
         <span class="flag-container">
 
-                    <img id="language-flag" src="{% static 'ru.svg' %}" alt="Флаг">
+                    <img id="language-flag" src="{% static 'image/ru.svg' %}" alt="Флаг">
                 </span>
     </label>
+    <div class="usd-eur">
+        Курс доллара: <span id="usd-rate"></span><span> &#8381;</span><br>
+        Курс евро: <span id="eur-rate"></span><span> &#8381;</span>
+    </div>
 
+    <div class="date-timer">
+    <span id="current-date"></span><br>
+    <span id="current-time"></span>
+</div>
     <form id="search-form">
         <label>
             <input id="search-input" type="text" placeholder="Введите текст">
@@ -73,7 +98,7 @@
 
     <div class="order">
         <button><span class="btn-order-text">ПЕРЕЙТИ в ЗАКАЗ</span></button>
-        <span class="order-count-item">В Вашем заказе 200 товаров</span>
+        <span class="order-count-item">В Вашем заказе < 8 > товарных позиций</span>
     </div>
 
 </div>
@@ -81,7 +106,7 @@
     <aside class="sidebar-left">
         <span class="sidebar-title">ПОЛЕЗНЫЕ СОВЕТЫ</span>
         <p class="sidebar-text"><br>Обеспечьте правильное хранение цветов - цветы нужно хранить в холодильнике, чтобы
-            сохранить их свежесть и увеличить срок их хранения.
+            сохранить их свежесть и увеличить срок хранения.
             Поддерживайте чистоту и порядок на складе и в магазине - это поможет создать приятную атмосферу для
             покупателей и повысит доверие к вашему бренду.
             Предлагайте широкий ассортимент цветов - чем больше выбор, тем больше вероятность того, что у покупателя
@@ -97,8 +122,8 @@
     </aside>
 
     <div class="catalog-container">
-        <table>
-            <caption><h1>ОНЛАЙН - ВИТРИНА</h1></caption>
+<table>
+            <caption style="padding: 10px; width: 100%;"><h1>ОНЛАЙН - ВИТРИНА</h1></caption>
             <thead>
             <tr>
                 <th>Наименование</th>
@@ -346,7 +371,7 @@
     </div>
 
     <aside class="sidebar-right">
-        <span class="sidebar-title">ОТРАСЛЕВАЯ РЕКЛАМА</span>
+        <span class="sidebar-title">ЦВЕТОЧНЫЕ НОВОСТИ</span>
         <p class="sidebar-text"><br>На нашей платформе Вы найдете широкий ассортимент цветочной продукции от лучших
             российских производителей. Мы гарантируем свежесть и высокое качество продукции, а также удобство и
             безопасность покупок.
@@ -364,19 +389,31 @@
     <p><span>РОССИЙСКИЙ </span><span class="first-letter">Ц</span>веточный <span class="first-letter">В</span>иртуальный
         <span class="first-letter">Е</span>диный <span class="first-letter">Т</span>орговый <span
                 class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс</p><br>
-    <p>© 2023 Россия Тольятти version 2.0.1-alpha.00</p>
+    <p>© 2023 Россия Тольятти © version 2.0.1-alpha.02</p>
 </footer>
 
-<!-- ConveyThis code -->
-<script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script>
-<script type="text/javascript">
-	document.addEventListener("DOMContentLoaded", function(e) {
-		ConveyThis_Initializer.init({
-			api_key: "pub_7228c728e7831c451c5b664c1cfc1dda"
-		});
-	});
+<script>
+$.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
+    var usdRate = data.Valute.USD.Value.toFixed(2);
+    var eurRate = data.Valute.EUR.Value.toFixed(2);
+    $("#usd-rate").text(usdRate);
+    $("#eur-rate").text(eurRate);
+});
 </script>
-<!-- End ConveyThis code -->
+<script>
+function updateTime() {
+  var now = new Date();
+  var timeStr = now.toLocaleTimeString('ru-RU');
+  var dateStr = now.toLocaleDateString('ru-RU');
+
+  document.getElementById('current-time').innerHTML = timeStr;
+  document.getElementById('current-date').innerHTML = dateStr;
+}
+
+// обновлять время каждую секунду
+setInterval(updateTime, 1000);
+</script>
+
 
 </body>
 </html>

@@ -1,13 +1,9 @@
 .search-bar {
     background-color: #c4efd3;
-    /*max-width: initial;*/
-    /*width: auto;*/
-    /*margin: 0 auto;*/
-    padding: 10px 50px 10px 50px;
+    padding: 10px 30px 10px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*display: inline-block;*/
     vertical-align: middle;
 }
 
@@ -19,10 +15,12 @@
     cursor: pointer;
     justify-content: center;
     vertical-align: central;
+
 }
 
 .search-bar button:hover {
     background-color: rgb(224, 114, 23);
+
 }
 
 input[type="text"] {
@@ -30,26 +28,29 @@ input[type="text"] {
     border: 1px solid #e71f1f;
     border-radius: 5px;
     font-size: 16px;
-    width: 200%;
-}
+    /*width: 100%;*/
 
+}
 
 #search-form label {
     display: flex;
     align-items: center;
-    width: 160%;
+    width: 180%;
     font-size: 16px;
+
 }
 
 select {
     padding: 10px;
     border: 1px solid #a69fe3;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     /*width: 100%;*/
 }
-#language-selector{
+
+#language-selector {
     margin-right: 10px;
+
 }
 
 #language-selector {
@@ -60,10 +61,10 @@ select {
 }
 
 #selected-language {
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
     color: #0b9393;
-    margin: 3px;
+    vertical-align: middle;
 }
 
 .flag-container {
@@ -71,39 +72,64 @@ select {
     vertical-align: middle;
     align-items: center;
     margin-right: 9px;
+
 }
-.world-container img{
+
+.world-container img {
     display: inline-flex;
     vertical-align: middle;
     align-items: center;
     margin-right: 9px;
     width: 2.6rem;
+
 }
 
 .flag-container img {
     width: 2.9rem;
     margin-left: 9px;
     border: 1px solid rgba(112, 110, 110, 0.45);
+
 }
 
 select option:first-child {
     color: transparent;
+
+}
+.usd-eur {
+    color: #025f67;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    justify-content: center;
+
+}
+
+.date-timer{
+    color: #0364b4;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Segoe UI", sans-serif;
+    justify-content: center;
+
 }
 .order {
     justify-content: center;
+
 }
 
 .btn-order-text {
     text-align: center;
     color: #025f67;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     font-family: "Segoe UI", sans-serif;
     justify-content: center;
+
 }
 
 .btn-order-text:hover {
     color: lemonchiffon;
+
 }
 
 .order-count-item {
@@ -111,5 +137,5 @@ select option:first-child {
     font-weight: bold;
     font-family: "Segoe UI", sans-serif;
     color: rgba(4, 93, 166, 0.92);
-}
 
+}

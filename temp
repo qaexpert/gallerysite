@@ -145,3 +145,250 @@ function updateLanguage() {
     background-color: transparent;
     border-color: transparent;
 }
+
+<table>
+            <caption style="padding: 10px"><h1>ОНЛАЙН - ВИТРИНА</h1></caption>
+            <thead>
+            <tr>
+                <th>Наименование</th>
+                <th>Сорт</th>
+                <th>Цвет</th>
+                <th>Поставщик</th>
+                <th>Цена</th>
+                <th>Скидка</th>
+                <th>Сумма</th>
+                <th>Добавить в заказ</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Дмитров</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Дмитров</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Дмитров</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Gracia</td>
+                <td>Розовый</td>
+                <td>Воронеж</td>
+                <td>60 рублей</td>
+                <td>10%</td>
+                <td>54 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Revival</td>
+                <td>Белый</td>
+                <td>Ступино</td>
+                <td>100 рублей</td>
+                <td>20%</td>
+                <td>80 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Cosmic</td>
+                <td>Белый</td>
+                <td>Самара</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Alegria</td>
+                <td>Красный</td>
+                <td>Краснодар</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Abigaile</td>
+                <td>Бордовый</td>
+                <td>Дмитров</td>
+                <td>80 рублей</td>
+                <td>10%</td>
+                <td>72 рубля</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Belinda</td>
+                <td>Белый</td>
+                <td>Тольятти</td>
+                <td>70 рублей</td>
+                <td>20%</td>
+                <td>56 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Пион</td>
+                <td>Bubbles</td>
+                <td>Белый</td>
+                <td>Волгоград</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Belinda</td>
+                <td>Белый</td>
+                <td>Тольятти</td>
+                <td>70 рублей</td>
+                <td>20%</td>
+                <td>56 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Пион</td>
+                <td>Bubbles</td>
+                <td>Белый</td>
+                <td>Волгоград</td>
+                <td>50 рублей</td>
+                <td>10%</td>
+                <td>45 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Роза</td>
+                <td>Belinda</td>
+                <td>Белый</td>
+                <td>Тольятти</td>
+                <td>70 рублей</td>
+                <td>20%</td>
+                <td>56 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Тюльпан</td>
+                <td>Maritim</td>
+                <td>Желтый</td>
+                <td>Саратов</td>
+                <td>20 рублей</td>
+                <td>10%</td>
+                <td>18 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <tr>
+                <td>Пион</td>
+                <td>Bubbles</td>
+                <td>Белый</td>
+                <td>Волгоград</td>
+                <td>500 рублей</td>
+                <td>10%</td>
+                <td>450 рублей</td>
+                <td>
+                    <button><span class="btn-add-text">Добавить</span></button>
+                </td>
+            </tr>
+            <!-- Repeat the rows for the remaining products -->
+            </tbody>
+        </table>
