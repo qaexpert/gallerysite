@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    vertical-align: middle;
+
 }
 
 .search-bar button[type="submit"] {
@@ -13,8 +13,7 @@
     border: none;
     padding: 9px;
     cursor: pointer;
-    justify-content: center;
-    vertical-align: central;
+
 
 }
 
@@ -49,12 +48,7 @@ select {
 }
 
 #language-selector {
-    margin-right: 10px;
-
-}
-
-#language-selector {
-    display: inline-block;
+    /* display: inline-block;*/
     vertical-align: middle;
     margin-right: 10px;
 
@@ -95,6 +89,7 @@ select option:first-child {
     color: transparent;
 
 }
+
 .usd-eur {
     color: #025f67;
     font-size: 17px;
@@ -104,15 +99,11 @@ select option:first-child {
 
 }
 
-.date-timer{
+.date-timer {
     color: #0364b4;
     font-size: 17px;
     font-weight: bold;
     font-family: "Segoe UI", sans-serif;
-    justify-content: center;
-
-}
-.order {
     justify-content: center;
 
 }
@@ -123,7 +114,6 @@ select option:first-child {
     font-size: 20px;
     font-weight: bold;
     font-family: "Segoe UI", sans-serif;
-    justify-content: center;
 
 }
 
@@ -132,10 +122,23 @@ select option:first-child {
 
 }
 
+.order {
+
+font-weight: bold;
+}
+
 .order-count-item {
     font-size: 18px;
-    font-weight: bold;
     font-family: "Segoe UI", sans-serif;
-    color: rgba(4, 93, 166, 0.92);
+    color: rgba(4, 101, 182, 0.92);
+
+}
+
+.order-count {
+    color: #fa3cf7;
+    font-size: 22px;
+    background-color: azure;
+    border-radius: 50px;
+    padding: 8px;
 
 }

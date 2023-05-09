@@ -1,0 +1,74 @@
+Создать модель для таблицы базы данных в файле models.py приложения Django.
+from django.db import models
+
+class Product(models.Model):
+    name = models.CharField(max_length=255)
+    sort = models.CharField(max_length=255)
+    color = models.CharField(max_length=255)
+    supplier = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    discount = models.DecimalField(max_digits=10, decimal_places=2)
+    amount = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+
+Зарегистрировать модель в файле admin.py приложения Django.
+from django.contrib import admin
+from .models import Product
+
+admin.site.register(Product)
+
+Создать представление для страницы, на которой будет выводиться таблица.
+
+from django.shortcuts import render
+from .models import Product
+
+def product_list(request):
+    products = Product.objects.all()
+    return render(request, 'product_list.html', {'products': products})
+
+Создать шаблон для страницы product_list.html и настроить вывод данных в таблицу.
+<table>
+<thead>
+    <tr>
+        <th>Наименование</th>
+        <th>Сорт</th>
+        <th>Цвет</th>
+        <th>Поставщик</th>
+        <th>Цена</th>
+        <th>Скидка</th>
+        <th>Сумма</th>
+        <th>Добавить в заказ</th>
+    </tr>
+</thead>
+<tbody>
+    {% for product in products %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.sort }}</td>
+        <td>{{ product.color }}</td>
+        <td>{{ product.supplier }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.discount }}</td>
+        <td>{{ product.price * product.amount }}</td>
+        <td><a href="#">Добавить</a></td>
+    </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+
+Настроить маршрут для представления в файле urls.py приложения Django.
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('product-list/', views.product_list, name='product_list'),
+]
+
+Зайти в админ панель Django и добавить необходимые записи в таблицу Product.
+
+Зайти на страницу, на которой выводится таблица
+(например, http://localhost:8000/product-list/) и
+убедиться в корректном выводе данных из базы данных в таблицу на странице.

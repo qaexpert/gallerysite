@@ -392,3 +392,4 @@ function updateLanguage() {
             <!-- Repeat the rows for the remaining products -->
             </tbody>
         </table>
+        orderCountItem.textContent = `В Вашем заказе <span class="order-count">${orderCount}</span> товарных позиций`;

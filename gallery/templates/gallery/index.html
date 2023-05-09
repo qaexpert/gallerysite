@@ -86,9 +86,9 @@
     </div>
 
     <div class="date-timer">
-    <span id="current-date"></span><br>
-    <span id="current-time"></span>
-</div>
+        <span id="current-date"></span><br>
+        <span id="current-time"></span>
+    </div>
     <form id="search-form">
         <label>
             <input id="search-input" type="text" placeholder="Введите текст">
@@ -98,7 +98,8 @@
 
     <div class="order">
         <button><span class="btn-order-text">ПЕРЕЙТИ в ЗАКАЗ</span></button>
-        <span class="order-count-item">В Вашем заказе < 8 > товарных позиций</span>
+        <span class="order-count-item">Добавьте товары в заказ</span>
+
     </div>
 
 </div>
@@ -122,7 +123,7 @@
     </aside>
 
     <div class="catalog-container">
-<table>
+        <table>
             <caption style="padding: 10px; width: 100%;"><h1>ОНЛАЙН - ВИТРИНА</h1></caption>
             <thead>
             <tr>
@@ -146,7 +147,7 @@
                 <td>10%</td>
                 <td>45 рублей</td>
                 <td>
-                    <button><span class="btn-add-text">Добавить</span></button>
+                    <button><span class="btn-add-text" data-id="1">Добавить</span></button>
                 </td>
             </tr>
             <tr>
@@ -158,7 +159,7 @@
                 <td>10%</td>
                 <td>45 рублей</td>
                 <td>
-                    <button><span class="btn-add-text">Добавить</span></button>
+                    <button><span class="btn-add-text" data-id="1">Добавить</span></button>
                 </td>
             </tr>
             <tr>
@@ -350,7 +351,7 @@
                 <td>10%</td>
                 <td>18 рублей</td>
                 <td>
-                    <button><span class="btn-add-text">Добавить</span></button>
+                    <button><span class="btn-add-text" data-id="1">Добавить</span></button>
                 </td>
             </tr>
             <tr>
@@ -389,31 +390,45 @@
     <p><span>РОССИЙСКИЙ </span><span class="first-letter">Ц</span>веточный <span class="first-letter">В</span>иртуальный
         <span class="first-letter">Е</span>диный <span class="first-letter">Т</span>орговый <span
                 class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс</p><br>
-    <p>© 2023 Россия Тольятти © version 2.0.1-alpha.03</p>
+    <p>© 2023 Россия Тольятти © version 2.0.1-alpha.04</p>
 </footer>
 
 <script>
-$.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
-    var usdRate = data.Valute.USD.Value.toFixed(2);
-    var eurRate = data.Valute.EUR.Value.toFixed(2);
-    $("#usd-rate").text(usdRate);
-    $("#eur-rate").text(eurRate);
-});
+    $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function (data) {
+        var usdRate = data.Valute.USD.Value.toFixed(2);
+        var eurRate = data.Valute.EUR.Value.toFixed(2);
+        $("#usd-rate").text(usdRate);
+        $("#eur-rate").text(eurRate);
+    });
 </script>
 <script>
-function updateTime() {
-  var now = new Date();
-  var timeStr = now.toLocaleTimeString('ru-RU');
-  var dateStr = now.toLocaleDateString('ru-RU');
+    function updateTime() {
+        var now = new Date();
+        var timeStr = now.toLocaleTimeString('ru-RU');
+        var dateStr = now.toLocaleDateString('ru-RU');
 
-  document.getElementById('current-time').innerHTML = timeStr;
-  document.getElementById('current-date').innerHTML = dateStr;
-}
+        document.getElementById('current-time').innerHTML = timeStr;
+        document.getElementById('current-date').innerHTML = dateStr;
+    }
 
-// обновлять время каждую секунду
-setInterval(updateTime, 1000);
+    // обновлять время каждую секунду
+    setInterval(updateTime, 1000);
 </script>
+<script>
+    const orderCountItem = document.querySelector('.order-count-item');
+const btnAddList = document.querySelectorAll('.btn-add-text');
 
+let orderCount = 0;
+
+btnAddList.forEach((btnAdd) => {
+  btnAdd.addEventListener('click', (event) => {
+    const productId = event.target.dataset.id;
+    orderCount++;
+
+    orderCountItem.innerHTML = `<span class="order-count-item">Количество товарных позиций в Вашем заказе: </span><span class="order-count">${orderCount}</span> `;
+  });
+});
+</script>
 
 </body>
 </html>
