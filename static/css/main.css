@@ -2,18 +2,16 @@ main {
 
     display: flex;
     text-align: center;
-    /*flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;*/
-
+    flex-direction: row;
+    /*align-items: center;*/
 }
 
 .catalog-container {
     width: 60%;
     overflow: auto;
-     max-width: 100%;
-     display: flex;
-  flex-wrap: wrap;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 table {
@@ -46,7 +44,7 @@ td {
 
 }
 
-.sidebar-left{
+.sidebar-left {
     width: 20%;
     flex-shrink: 0;
     padding: 25px;
