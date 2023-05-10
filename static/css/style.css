@@ -4,15 +4,37 @@
     box-sizing: border-box;
 
 }
-
+.headcontainer {
+  display: flex;
+  flex-direction: row;
+    min-height: 100vh;
+}
 header, nav, main, footer, .search-bar {
 
     width: 100%;
     display: flex;
     text-align: center;
-    align-items: center;flex-wrap: wrap;
+    align-items: center;
+    /*flex-wrap: wrap;*/
 
 }
+
+nav, .search-bar {
+    /*margin-top: 74px; *//* Высота header */
+}
+
+/*header {
+  z-index: 3;
+}*/
+
+nav {
+    /*z-index: 2;*/
+}
+
+.search-bar {
+    /*z-index: 1;*/
+}
+
 
 body {
     font-family: "Segoe UI", sans-serif;
@@ -21,6 +43,11 @@ body {
     color: #14502e;
     background-color: rgba(252, 248, 224, 0.16);
     padding-bottom: 85px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
@@ -43,7 +70,7 @@ button {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    /*transition: background-color 0.3s ease;*/
     padding: 10px 20px;
     letter-spacing: 2px;
 }

@@ -1,9 +1,13 @@
 .search-bar {
     background-color: #c4efd3;
     padding: 10px 15px 10px 15px;
-    display: flex;
+
     justify-content: space-between;
     vertical-align: middle;
+    position: fixed;
+    top: 188px; /* Высота хэдера + высота навигации */
+    width: 100%;
+
 
 }
 
@@ -142,5 +146,5 @@ select option:first-child {
     background-color: azure;
     border-radius: 50px;
     padding: 2px;
-   vertical-align: middle;
+    vertical-align: middle;
 }

@@ -2,12 +2,12 @@ footer {
     background-color: #2d9375;
     color: #95e5db;
     position: fixed;
-
+/*margin-top: auto;*/
     bottom: 0;
     padding: 5px;
     height: 74px;
     letter-spacing: 2px;
-    box-sizing: initial;
+    box-sizing: border-box;
     /*flex-wrap: wrap;*/
     justify-content: center;
 }

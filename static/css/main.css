@@ -1,11 +1,13 @@
 main {
-
+    flex-grow: 1;
     align-items: start;
+    padding-top: 254px; /* Высота header */
+
 }
 
 .catalog-container {
     width: 60%;
-    overflow-x: auto;
+    /*overflow-x: auto;*/
     max-width: 100%;
     /*display: flex;
     flex-wrap: wrap;*/
@@ -15,7 +17,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
-
+    overflow-x: auto; /**/
 }
 
 th {
@@ -33,19 +35,21 @@ th {
 }
 
 td {
-    border: 1px solid #e0763f;
+    border: 1px solid #dbc47f;
     padding: 5px;
-    color: #035928;
+    color: #077235;
     font-size: 19px;
 
 
 }
+
 td, th {
-  white-space: nowrap; /* Запрет переноса содержимого ячеек на новую строку */
-  overflow: hidden; /* Скрытие содержимого ячеек, которое не помещается */
-  text-overflow: ellipsis; /* Отображение многоточия (...) в случае обрезания содержимого */
-  padding: 5px; /* Добавляем отступы для ячеек */
+    white-space: nowrap; /* Запрет переноса содержимого ячеек на новую строку */
+    overflow: hidden; /* Скрытие содержимого ячеек, которое не помещается */
+    text-overflow: ellipsis; /* Отображение многоточия (...) в случае обрезания содержимого */
+    padding: 5px; /* Добавляем отступы для ячеек */
 }
+
 .sidebar-left {
     width: 20%;
     flex-shrink: 0;
@@ -89,3 +93,19 @@ td, th {
     justify-content: center;
 
 }
+
+/*@media screen and (max-width: 480px) {
+  .catalog-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 5px;
+  }*/
