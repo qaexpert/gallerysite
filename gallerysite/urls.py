@@ -1,5 +1,5 @@
 """
-URL configuration for gallerysite project.
+URL configuration for a gallerysite project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -19,11 +19,14 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
-from gallery.views import index_page
+from gallery import views
 
 urlpatterns = [
-    path( "admin/", admin.site.urls ),
-    path( '', index_page ),
+    path( 'admin/', admin.site.urls ),
+    path( 'product-list/', views.product_list, name='product_list' ),
+    path( '', views.index_page, name='index_page' ),
+    path( 'base/', views.base_page, name='base_page' ),
 ]
+
 urlpatterns += static( settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )
 urlpatterns += static( settings.STATIC_URL, document_root=settings.STATIC_ROOT )

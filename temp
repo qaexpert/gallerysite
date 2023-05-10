@@ -22,6 +22,8 @@
 
 <a href="{% url 'project' project.id %}"><img src="/static/project_images/default.jpg"
                                                                                   alt="фото товара"/>
+python manage.py createsuperuser    galleryadmin   d2575@yandex.ru
+
 
 python -m venv venv
 
@@ -30,11 +32,15 @@ python -m venv venv
        pip freeze > requirements.txt
 pip install -r requirements.txt
        python manage.py check
-python manage.py migrate     python manage.py makemigrations
+python manage.py migrate
+
+python manage.py makemigrations
 
 python manage.py runserver
 
 &#x1F310; /это земной шар
+
+ <!--<script src="{% static 'js/ordercountitem.js' %}"></script>-->
 
 class="first-letter" style="color: inherit;"
 <td class="settings__thumbnail">
@@ -90,6 +96,36 @@ class="first-letter" style="color: inherit;"
                     <!--<option value="" selected data-placeholder>Выбрать язык</option>-->
                     <!--<option selected >Выбрать язык</option>-->
 
+<script>
+    const orderCountItem = document.querySelector(".order-count-item");
+    const btnAddList = document.querySelectorAll(".btn-add-text");
+
+    let orderCount = 0;
+
+    btnAddList.forEach((btnAdd) => {
+        btnAdd.addEventListener('click', (event) => {
+            const productId = event.target.dataset.id;
+            orderCount++;
+
+            orderCountItem.innerHTML = `<span class="order-count-item">Количество товарных позиций в Вашем заказе: </span><span class="order-count">${orderCount}</span> `;
+        });
+    });
+</script>
+<script>
+    const orderCountItem = document.querySelector(".order-count-item");
+    const btnAddList = document.querySelectorAll(".btn-add-text");
+
+    let orderCount = 0;
+
+    btnAddList.forEach((btnAdd) => {
+        btnAdd.addEventListener('click', (event) => {
+            const productId = event.target.dataset.id;
+            orderCount++;
+
+            orderCountItem.innerHTML = `<span class="order-count-item">Количество товарных позиций в Вашем заказе: </span><span class="order-count">${orderCount}</span> `;
+        });
+    });
+</script>
 <label>
                 <span class="language-flag">&#x1F310;</span>
                 <select id="language-selector" onchange="updateLanguage()">
@@ -393,3 +429,5 @@ function updateLanguage() {
             </tbody>
         </table>
         orderCountItem.textContent = `В Вашем заказе <span class="order-count">${orderCount}</span> товарных позиций`;
+
+        <td>{{ product.price|floatformat:2 }} * ({{ 1 }} - {{product.discount}} / {{100|floatformat:2 }})</td>

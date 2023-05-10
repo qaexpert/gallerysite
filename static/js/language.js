@@ -22,7 +22,7 @@ function translateText() {
     var url = "/translate?text=" + encodeURIComponent(text) + "&target=" + targetLang;
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url, true);
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             document.getElementById("text-to-translate").innerHTML = xhr.responseText;
         }
@@ -31,3 +31,8 @@ function translateText() {
 }
 
 document.getElementById("language-selector").addEventListener("change", translateText);
+
+
+
+
+

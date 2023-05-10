@@ -124,7 +124,7 @@ select option:first-child {
 
 .order {
 
-font-weight: bold;
+    font-weight: bold;
 }
 
 .order-count-item {
