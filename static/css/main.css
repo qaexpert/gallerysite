@@ -5,16 +5,16 @@ main {
 
 .catalog-container {
     width: 60%;
-    overflow: auto;
+    overflow-x: auto;
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    /*display: flex;
+    flex-wrap: wrap;*/
 }
 
 table {
-    /*width: 100%;*/
+    width: 100%;
     border-collapse: collapse;
-
+    table-layout: fixed;
 
 }
 
@@ -29,7 +29,7 @@ th {
 
 th {
     border: 1px solid #ab1207;
-    padding: 20px;
+    padding: 5px;
 }
 
 td {
@@ -40,7 +40,12 @@ td {
 
 
 }
-
+td, th {
+  white-space: nowrap; /* «апрет переноса содержимого €чеек на новую строку */
+  overflow: hidden; /* —крытие содержимого €чеек, которое не помещаетс€ */
+  text-overflow: ellipsis; /* ќтображение многоточи€ (...) в случае обрезани€ содержимого */
+  padding: 5px; /* ƒобавл€ем отступы дл€ €чеек */
+}
 .sidebar-left {
     width: 20%;
     flex-shrink: 0;

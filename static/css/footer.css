@@ -8,7 +8,7 @@ footer {
     height: 74px;
     letter-spacing: 2px;
     box-sizing: initial;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     justify-content: center;
 }
 

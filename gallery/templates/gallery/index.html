@@ -26,13 +26,14 @@
     {% endblock %}
 </head>
 <body>
-<header><img src="{% static 'image/rose1-3d-96.png' %}"
-             alt="Логотип «Ц.В.Е.Т.О.К»">
+<header><img src="{% static 'image/rose1-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К»">
+
     <div>
         <span class="digital">ЦИФРОВАЯ ПЛАТФОРМА</span><br>
         <span class="russian">РОССИЙСКИЙ «Ц.В.Е.Т.О.К.»</span>
     </div>
-    <img src="{% static 'image/rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К.»">
+    <img src="{% static 'image/rose2-3d-96.png' %}" alt="Логотип «Ц.В.Е.Т.О.К»">
+
 </header>
 
 <nav>
@@ -66,6 +67,10 @@
 </nav>
 
 <div class="search-bar">
+    <div class="date-timer">
+        <span id="current-date"></span><br>
+        <span id="current-time"></span>
+    </div>
     <label>
         <span class="world-container"><img src="{% static 'image/select_language_100.png' %}" alt="world"></span>
         <select id="language-selector" onchange="updateLanguage()">
@@ -88,10 +93,7 @@
         Курс евро: <span id="eur-rate"></span><span> &#8381;</span>
     </div>
 
-    <div class="date-timer">
-        <span id="current-date"></span><br>
-        <span id="current-time"></span>
-    </div>
+
     <form id="search-form">
         <label>
             <input id="search-input" type="text" placeholder="Введите текст">
@@ -100,8 +102,9 @@
     </form>
 
     <!--<div class="order"></div>-->
-        <button><span class="btn-order-text">ПЕРЕЙТИ в ЗАКАЗ</span></button>
-        <span class="order-count-item">Добавьте товары в заказ</span>
+    <span class="order-count-item">Добавьте товары в заказ</span>
+    <button><span class="btn-order-text">ПЕРЕЙТИ в ЗАКАЗ</span></button>
+
 
 </div>
 <main>
@@ -390,9 +393,9 @@
 <footer>
     <p><span>РОССИЙСКИЙ </span><span class="first-letter">Ц</span>веточный <span class="first-letter">В</span>иртуальный
         <span class="first-letter">Е</span>диный <span class="first-letter">Т</span>орговый <span
-                class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс<br>© 2023 Россия Тольятти © version 2.0.1-alpha.06</p>
-   </footer>
-
+                class="first-letter">О</span>нлайн <span class="first-letter">К</span>омплекс<br>© 2023 Россия Тольятти
+        © version 2.0.1-alpha.07</p>
+</footer>
 
 
 </body>

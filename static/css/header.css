@@ -2,8 +2,8 @@ header {
     background-color: rgba(63, 229, 178, 0.29);
     padding: 6px 0 6px 0;
     justify-content: center;
-    box-sizing: initial;
-    top: 0;
+   /* box-sizing: initial;*/
+
 }
 
 .digital {
