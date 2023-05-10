@@ -1,13 +1,8 @@
 header {
     background-color: rgba(63, 229, 178, 0.29);
     padding: 6px 0 6px 0;
-    display: flex;
     justify-content: center;
-    text-align: center;
-    width: 100%;
     box-sizing: initial;
-
-    position: static;
     top: 0;
 }
 
