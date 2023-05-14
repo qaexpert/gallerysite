@@ -4,11 +4,7 @@
     box-sizing: border-box;
 
 }
-.headcontainer {
-  display: flex;
-  flex-direction: row;
-    min-height: 100vh;
-}
+
 header, nav, main, footer, .search-bar {
 
     width: 100%;
